@@ -5,6 +5,8 @@ import 'package:flutternavigation/pages/page_one.dart';
 import 'package:flutternavigation/pages/page_two.dart';
 
 class Home extends StatelessWidget {
+  static final String route = "/";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,9 +40,7 @@ class Home extends StatelessWidget {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => PageOne()),
-                  );
+                  Navigator.of(context).pushNamed(PageOne.route);
                 },
               ),
               SizedBox(
@@ -58,9 +58,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => PageTwo()),
-                  );
+                  Navigator.of(context).pushNamed(PageTwo.route);
                 },
               )
             ],
